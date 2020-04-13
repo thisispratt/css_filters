@@ -52,6 +52,21 @@
     }
     #heart-img{
         transform: scale(0.6);
+        animation-name: heartBeat;
+        animation-duration: 700ms;
+        animation-iteration-count: infinite;
+    }
+    @keyframes heartBeat {
+        0% {
+
+        }
+        20% {
+            transform: scale(0.5);
+            
+        }
+        100% {
+            transform: scale(0.3);
+        }
     }
     footer{
         position: relative;
