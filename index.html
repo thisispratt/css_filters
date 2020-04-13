@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB-TECH-ASSIGNMENT</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<style>
+    body{
+        min-height: 100vh;
+    }
+    .jumbotron{
+        margin-top: 2rem;
+    }
+    .img-scale{
+        width: 100%;
+        height: auto;
+    }
+    .fliped{
+        /* filter: flipH and flipV  are deprecated*/
+        transform: scaleX(-1) scaleY(-1);
+    }
+    .dropShadow{
+        filter: drop-shadow(9px 7px 7px #6e5e5b);
+    }
+    .grayImage{
+        filter: grayscale(90%);
+    }
+    .blurImage{
+        filter: blur(3px);
+    }
+    .alphaImage{
+
+        /* filter: alpha(opacity=50);   Deprecated!  FOR IE 8 and below */
+        filter: opacity(25%);
+    }
+    .hueImage{ 
+        /* filter: wave(add=0, freq=1, phase=0, strength= 10);  Deprecated */
+        /* filter: xray;  Deprecated   [filter: invert(100%) grayscale(100%); gives the same result.] */
+
+        filter: hue-rotate(80deg);
+        
+    }
+    .invertedImage{
+        filter: invert(80%);
+    }
+    .glowingImage{
+        /* filter: glow(color= red, strength= 5);   Deprecated! */
+        box-shadow: 0px 0px 7px 6px #f77b4a;
+    }
+    #heart-img{
+        transform: scale(0.6);
+    }
+    footer{
+        position: relative;
+        bottom: 0;
+        margin-top: 3vw;
+        padding: 5px;
+        text-align: center;
+        color: #fcfcfc;
+        background-color: #343A40;
+    }
+</style>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">WEB-TECH-ASSIGNMENT</a>
+        </div>
+    </nav>
+
+    <!-- JUMBOTRON -->
+    <div class="container">
+        <div class="jumbotron">
+            <!-- <div class="container"> -->
+              <h1 class="display-5">CSS: Filters</h1>
+              <p class="lead">Various filters applied on a single image.</p>
+            <!-- </div> -->
+          </div>
+
+        <div class="row">
+            <div class="col-sm-6 col-md-4">
+                <img class="img-scale img-thumbnail " src="https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=774&q=80" alt="original-image"> 
+                <h5>Original Image</h5>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <img class="img-scale img-thumbnail dropShadow" src="https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=774&q=80" alt="dropshadow-img"> 
+                <h5>Drop-shadow</h5>
+            </div>
+            
+            <div class="col-sm-6 col-md-4">
+                <img class="img-scale img-thumbnail alphaImage" src="https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=774&q=80" alt="alpha-image"> 
+                <h5>Alpha(Opacity)</h5>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <img class="img-scale img-thumbnail grayImage" src="https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=774&q=80" alt="gray-image"> 
+                <h5>Gray</h5>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <img class="img-scale img-thumbnail blurImage" src="https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=774&q=80" alt="blur-image"> 
+                <h5>Blur</h5>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <img class="img-scale img-thumbnail fliped" src="https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=774&q=80" alt="flip-image"> 
+                <h5>Fliped</h5>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <img class="img-scale img-thumbnail hueImage" src="https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=774&q=80" alt="hue-image"> 
+                <h5>Hue-rotate</h5>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <img class="img-scale img-thumbnail invertedImage" src="https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=774&q=80" alt="invert-image"> 
+                <h5>Invert</h5>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <img class="img-scale img-thumbnail glowingImage" src="https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=774&q=80" alt="glow-image"> 
+                <h5>Glow</h5>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer">
+        Made with <img id="heart-img" src="https://img.icons8.com/color/48/000000/filled-like.png"> by <a href="https://www.linkedin.com/in/thisispratt/" target="_blank">Prabhat Tiwari</a>
+    </footer>
+
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
